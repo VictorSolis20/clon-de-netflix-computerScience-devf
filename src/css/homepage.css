@@ -1,0 +1,264 @@
+/* ------------------- General ------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/* ----------------- Estilos header -------------------------- */
+header {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor-logo .logo {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.logo {
+    width: 115px;
+    position: absolute;
+    top: 25px;
+    left: 17px;
+    z-index: 100;
+
+}
+
+.menu_list {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 7px;
+    margin-top: 18px;
+    margin-left: 170px;
+    width: max-content;
+}
+
+.menu_list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.menu_list li a {
+    color: rgb(236, 231, 231);
+    text-decoration: none;
+}
+
+.menu_list li a:hover{
+    color: #AAA;
+    font-weight: bold;
+}
+
+.menu_list li a.activo{
+    color: #fff;
+    font-weight: bold;
+}
+
+.info_usuario {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 7px;
+    margin-top: 18px;
+    display: flex;
+    position: absolute;
+    margin-top: 15px;
+    justify-content: right;
+    padding-right: 45px;
+    right: 0;
+}
+
+.info_usuario li {
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 7px;
+}
+
+.info_usuario li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.info_usuario li a:hover,
+.info_usuario li a.activo {
+    color: #AAA;
+}
+
+.info_usuario .imagen_usuario {
+    margin-top: 0;
+}
+
+.info_usuario li a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+}
+
+/* --------------- Pelicula Principal -------------------*/
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+.pelicula-principal {
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../img/Spider-Man.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+
+.pelicula-principal .contenedor {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.2em;
+}
+
+.pelicula-principal .boton {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+    background: #fff;
+    color: #000;
+}
+
+.pelicula-principal .boton svg {
+    margin-right: 10px;
+}
+
+.pelicula-principal .boton i {
+    margin-right: 1.25em;
+}
+
+/* ----------- Contenedor Titulo y Controles ----------------- */
+.contenedor-titulo-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contenedor-titulo-controles .indicadores button {
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+    background: red;
+}
+
+/* ---------------- Contenedor Principal y Flechas ------------------- */
+.peliculas-recomendadas,
+.peliculas-terror,
+.peliculas-accion,
+.peliculas-comedia,
+.peliculas-populares {
+    margin-bottom: 20px;
+}
+
+.contenedor-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.contenedor-principal .flecha-izquierda,
+.contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50%-25%);
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.contenedor-principal .flecha-izquierda:hover,
+.contenedor-principal .flecha-derecha:hover {
+    background: rgba(0, 0, 0, .9);
+}
+
+.contenedor-principal .flecha-izquierda {
+    left: 0;
+}
+
+.contenedor-principal .flecha-derecha {
+    right: 0;
+}
+
+/* ------------------ Carousel ----------------- */
+.contenedor-carousel {
+    width: 100%;
+    padding: 10px 0 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.contenedor-carousel .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.contenedor-carousel .carousel .pelicula {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, rgba(0, 0, 0, 0.3));
+}
+
+.contenedor-carousel .carousel .pelicula:hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.contenedor-carousel .carousel .pelicula img {
+    width: 100%;
+    vertical-align: top;
+}
